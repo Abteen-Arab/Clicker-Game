@@ -6,7 +6,11 @@ void Option() {
   image(bkgrnd, 0, 0);
   fill(130);
   rect(100, 150, 600, 600, width/50, width/50, width/50, width/50);
-
+  //Title
+  fill(0);
+  textSize(100);
+  text("Options", width/2 -2, 75+2);
+  text("Options", width/2, 75);
   //Hulk
   strokeWeight(5);
   tactileR(185, 295, 175, 285);
@@ -38,7 +42,7 @@ void Option() {
 
   //Selector Line
   tactileR(350, 550, 430, 470);
-  strokeWeight(d * 0.1);
+  strokeWeight(d * 0.05);
   line(350, 450, 550, 450);
   //Circle On Selector
   fill(255);
@@ -52,7 +56,7 @@ void Option() {
     rect(150, 400, szeX, szeY, width/50, width/50, width/50, width/50);
     image(SM, 150, 400, szeX, szeY);
   } else if (PlayerSelector == 2) {
-    fill(Blue);
+    fill(Yellow);
     rect(150, 400, szeX, szeY, width/50, width/50, width/50, width/50);
     image(IM, 150, 400, szeX, szeY);
   } else if (PlayerSelector == 3) {
@@ -66,11 +70,12 @@ void Option() {
   strokeWeight(5);
   rect(200, 600, 400, 100, width/50, width/50, width/50, width/50);
   fill(0);
+  textSize(50);
   text("Back-Smash", width/2 - 2, 652);
-  fill(Green);
+  fill(Purple);
   text("Back-Smash", width/2, 650);
 }
-
+  
 void Optionc() {
   if (mouseX > 350 && mouseX < 460 && mouseY > 175 && mouseY < 285) {
     PlayerSelector = 1;

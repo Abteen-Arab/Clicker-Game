@@ -23,6 +23,5 @@ void mouseDragged() {
     d = 100;
     vx = random (-5, 5);
     vy = random (-5, 5);
-
   }
 }

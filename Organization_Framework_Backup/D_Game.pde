@@ -6,7 +6,7 @@ void game() {
     stroke(255);
     image(SM, x-50, y-50, szeX, szeY);
   } else if (PlayerSelector == 2) {
-    background(Blue);
+    background(Yellow);
     stroke(255);
     image(IM, x-50, y-50, szeX, szeY);
   } else if (PlayerSelector == 3) {
@@ -43,7 +43,6 @@ void game() {
   }
 }
 
-
 void gamec() {
   if (mouseX > x-50 && mouseX < x+szeX-50 && mouseY > y-50 && mouseY < y+szeY-50) {
     score = score + 1;
@@ -51,27 +50,28 @@ void gamec() {
     vy = vy * 1.1;
     point.rewind();
     point.play();
+    
   } else if (mouseX > 50 && mouseX < 150 && mouseY > 50 && mouseY < 100) { 
     mode = Pause;
+    
   } else {
     lives = lives - 1;
     life.rewind();
     life.play();
   } 
-
-  //Game End
+  
+  if (score > bscore) {
+    bscore = score;
+  } 
+  
   if (lives == 0) {
     mode = GameOver;
     lives = 5;
     score = 0;
     vx = random (-5, 5);
     vy = random (-5, 5);
+    lost.rewind();
     lost.play();
-  }
-    
-  //Best Score
-  if (score > bscore) {
-    bscore = score;
   }
     
 }

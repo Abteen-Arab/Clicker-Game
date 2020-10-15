@@ -1,7 +1,9 @@
 // Abteen Arab
 // "Date"
 // Block: 1-1B 
-// "Project Name"
+// Clicker Game
+
+// The 800 by 800 leaves a bit of the stuff out.
 
 //Minim
 import ddf.minim.*;

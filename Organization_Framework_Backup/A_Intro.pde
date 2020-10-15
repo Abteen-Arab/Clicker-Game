@@ -5,7 +5,7 @@ void intro() {
   fill(0);
   textSize(50);
   text("Super Marvel Smash", 398, 302);
-  textSize(0);
+  textSize(50);
   text("Super Marvel Smash", 400, 300);
   //Start Button 
   tactileR(200,600,500,600);
